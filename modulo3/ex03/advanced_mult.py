@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 num1 = 0
-
 while num1 <= 10:
     print(f"Table of {num1}: ", end="")
     num2 = 0

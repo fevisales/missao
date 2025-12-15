@@ -6,10 +6,17 @@ user_args = sys.argv[1:]
 
 z_count = 0
 
-for arg in user_args:
-    if "z" in arg or "Z" in arg:
-        z_count += 1
-    else:
-        print("achou não")
+if len(user_args) == 1:
+    words = user_args[0].split()
+else:
+    words = user_args
 
-print(z_count * "z")
+for arg in words:
+    if "z" in arg.lower():
+        z_count += 1
+
+if z_count > 0:
+    print(z_count * "z")
+else:
+    print("Não foi encontrada nenhuma palavra com a letra \"Z\"")
+
